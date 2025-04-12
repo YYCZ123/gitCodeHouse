@@ -128,6 +128,11 @@ void FpsCameraController::update(float deltaTime)
     vec3 moveVec = { dx, dy, dz };
 
     viewRotation += vec2(drx, dry) * rotationSpeed * deltaTime;
+    mat4        m1 = { mat4::rotationYX(viewRotation.getY(), viewRotation.getX()) };
+    float       posLength = length(viewPosition);
+    const vec3& v{ m1.getCol2().getXYZ() };
+    viewPosition = -posLength*v;
+
 
     // divide by length to normalize if necessary
     float lenS = lengthSqr(moveVec);

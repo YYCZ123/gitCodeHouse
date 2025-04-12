@@ -363,7 +363,7 @@ int WindowsMain(int argc, char** argv, IApp* app)
 #if defined(ENABLE_GRAPHICS_VALIDATION) && defined(VULKAN) && VK_OVERRIDE_LAYER_PATH
     // We are now shipping validation layer in the repo itself to remove dependency on Vulkan SDK to be installed
     // Set VK_LAYER_PATH to executable location so it can find the layer files that our application wants to use
-    SetEnvironmentVariableA("VK_LAYER_PATH", pSystemFileIO->GetResourceMount(RM_DEBUG));
+    //SetEnvironmentVariableA("VK_LAYER_PATH", pSystemFileIO->GetResourceMount(RM_DEBUG));
 #endif
 
     initLog(app->GetName(), DEFAULT_LOG_LEVEL);

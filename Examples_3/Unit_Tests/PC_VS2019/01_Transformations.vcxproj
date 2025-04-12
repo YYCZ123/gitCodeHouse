@@ -36,7 +36,7 @@
   <PropertyGroup Label="Globals">
     <ProjectGuid>{5938554B-1112-4A6D-9CA0-EDEA01CB7F3F}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0.22621.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
@@ -79,7 +79,7 @@
       <PrecompiledHeader>
       </PrecompiledHeader>
       <Optimization>Disabled</Optimization>
-      <PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>FORGE_EXPLICIT_RENDERER_API;FORGE_EXPLICIT_RENDERER_API_VULKAN;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SuppressStartupBanner>true</SuppressStartupBanner>
     </ClCompile>
     <Link>
@@ -89,7 +89,7 @@
       <AdditionalDependencies>
         Xinput9_1_0.lib;
         ws2_32.lib;
-        Renderer.lib;
+ RendererVulkan.lib;       Renderer.lib;
         OS.lib;
         %(AdditionalDependencies);
       </AdditionalDependencies>
@@ -120,7 +120,7 @@
       <OutDir>$(OutDir)Shaders</OutDir>
       <BinaryOutDir>$(OutDir)CompiledShaders</BinaryOutDir>
       <Compile>true</Compile>
-      <Language>DIRECT3D12</Language>
+      <Language>VULKAN</Language>
     </FSLShader>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">

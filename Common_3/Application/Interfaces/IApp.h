@@ -174,6 +174,7 @@ public:
     InputEnum CUSTOM_PT_X = {};
     InputEnum CUSTOM_PT_Y = {};
     InputEnum CUSTOM_PT_DOWN = {};
+    InputEnum CUSTOM_ZOOM = {};
 
     void AddCustomInputBindings()
     {
@@ -191,6 +192,7 @@ public:
         CUSTOM_PT_X = inputGetCustomBindingEnum("pt_x");
         CUSTOM_PT_Y = inputGetCustomBindingEnum("pt_y");
         CUSTOM_PT_DOWN = inputGetCustomBindingEnum("pt_down");
+        CUSTOM_ZOOM = inputGetCustomBindingEnum("zoom");
     }
 
     static int          argc;
