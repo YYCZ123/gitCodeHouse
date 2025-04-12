@@ -165,7 +165,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{226FB9F3
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "RendererVulkan", "Libraries\Tests\RendererVulkan.vcxproj", "{0D2A392A-A59C-425E-ACD8-2FE1682346A8}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "40_VulkanWyy", "..\..\..\..\..\The-Forge\Examples_3\Unit_Tests\PC Visual Studio 2019\40_VulkanWyy.vcxproj", "{3964A906-76D5-40D7-BB93-ECBB33DE5ABB}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "40_VulkanWyy", "40_VulkanWyy.vcxproj", "{3964A906-76D5-40D7-BB93-ECBB33DE5ABB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -433,6 +433,8 @@ move_y; buttonanalog; K_W; 1.0f; K_S; -1.0f
 move_up; buttonanalog; K_E; 1.0f; K_Q; -1.0f
 look_x; analog; MOUSE_DX; 0.0025f; cond; MOUSE_1; pressed; removedt
 look_y; analog; MOUSE_DY; 0.0025f; cond; MOUSE_1; pressed; removedt
+zoom; analog; MOUSE_WHEEL_UP; 0.0025f
+zoom; analog; MOUSE_WHEEL_DOWN; -0.0025f
 look_x; buttonanalog; K_H; 1.0f; K_F; -1.0f
 look_y; buttonanalog; K_T; 1.0f; K_G; -1.0f
 reset_view; button; K_SPACE; released

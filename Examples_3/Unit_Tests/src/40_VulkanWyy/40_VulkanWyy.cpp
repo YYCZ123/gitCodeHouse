@@ -359,13 +359,13 @@ public:
         currentTime += deltaTime * 1000.0f;
 
         // update camera with time
-        mat4 viewMat = pCameraController->getViewMatrix();
+        auto viewMat = pCameraController->getViewMatrix();
 
         const float  aspectInverse = (float)mSettings.mHeight / (float)mSettings.mWidth;
         const float  horizontal_fov = PI / 2.0f;
         CameraMatrix projMat = CameraMatrix::perspectiveReverseZ(horizontal_fov, aspectInverse, 0.1f, 1000.0f);
         gEnvironmentData.mProjectView = projMat * viewMat;
-        gEnvironmentData.mToWorldMat = inverse(viewMat);
+        gEnvironmentData.mToWorldMat = inverse(viewMat.mCamera);
         g_RenderNum++;
         if (g_RenderNum == 4000)
         {
